@@ -1,6 +1,7 @@
 import React from 'react';
 import monster from '../../assets/img/developermonster-face.png';
 import loadingIcon from '../../assets/img/loading.png';
+import './main.css';
 
 function Navbar() {
 

@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import Loading from '../Loading/index';
+import './main.css'
 
 function NewPurchase() {
   const navigate = useNavigate();
@@ -52,7 +53,9 @@ function NewPurchase() {
           </form>
         </div>
       </div>
-      <strong><span className="alert-text">{newPurchaseStatus}</span></strong>
+      <div className='d-flex justify-content-around'>
+        <strong><span className="alert-text">{newPurchaseStatus}</span></strong>
+      </div>
       { isLoading === true ? <Loading /> : <></> }
     </>
   )

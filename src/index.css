@@ -23,9 +23,12 @@ body {
 
 #content {
   width: 100%;
-  max-width: 1024px;
+  height: 100vh;
   margin: auto;
-  padding: 83px 15px 20px;
+  background-image: url('https://rolandoarguello.com/wp-content/uploads/2023/05/area_bg01.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 h2 {
@@ -69,211 +72,10 @@ span {
   to {transform:rotate(360deg);}
 }
 
-/* Navbar */
-
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2;
-  padding: 15px 15px 0;
-  background-color: #1c1121;
-  border-bottom: 2px solid #3a3042;
-}
-
-.navbar .container {
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 1024px;
+  margin: auto;
 }
-
-.navbar .logo img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border: 2px solid #e4a101;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.navbar .logo h2 {
-  font-family: 'Oxanium', cursive;
-  font-weight: 800;
-  font-size: 24px;
-  margin-top: 7px;
-}
-
-.navbar .logo h2 span {
-  font-size: 24px;
-  color: #e4a101;
-}
-
-.navbar-nav li a {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  color: #fff;
-  display: block;
-  float: left;
-  margin: 0;
-  padding: 18px 5%;
-  text-align: left;
-  text-decoration: none;
-  text-transform: capitalize;
-  width: 100%;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.nav-item img {
-  width: 30px;
-  border-radius: 50%;
-}
-
-.navbar-toggler img {
-  margin-top: -20px;
-  transition: all 300ms linear;
-}
-
-.navbar-toggler.collapsed img {
-  transform: rotate(70deg);
-}
-
-.navbar-toggler:focus {
-  box-shadow: unset;
-}
-
-/* New Purchase */
-.newsletter-wrap {
-  border-radius: 80px;
-  background-color: rgb(25, 14, 34);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 100px 0 40px;
-  position: relative;
-  z-index: 1;
-}
-
-.newsletter-form form {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-}
-
-.newsletter-form-grp {
-  position: relative;
-}
-
-.newsletter-form-grp i {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 14px;
-  left: 15px;
-}
-
-.newsletter-form form input {
-  width: 195px;
-  background: #24182d;
-  border: none;
-  color: #fff;
-  padding: 17px 40px;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.newsletter-form form input::placeholder {
-  color: #a0a0a0;
-}
-
-.newsletter-form-grp::before,
-.newsletter-form button::before {
-  content: "";
-  position: absolute;
-  left: -20px;
-  top: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 0 55px 20px;
-  border-color: transparent transparent #24182d transparent;
-}
-
-.newsletter-form-grp::after,
-.newsletter-form button::after {
-  content: "";
-  position: absolute;
-  right: -20px;
-  top: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 55px 20px 0 0;
-  border-color: #24182d transparent transparent transparent;
-}
-
-.newsletter-title h2 {
-  font-size: 26px;
-  letter-spacing: -1px;
-}
-
-.newsletter-form button {
-  border: none;
-  color: #1c1121;
-  font-size: 14px;
-  font-weight: 800;
-  padding: 17px 15px;
-  margin-left: 30px;
-  position: relative;
-  cursor: pointer;
-  transition: .3s linear;
-  background-color: var(--yellow);
-}
-
-.newsletter-form button::before {
-  border-color: transparent transparent #e4a101 transparent;
-  transition: .3s linear;
-}
-
-.newsletter-form button::after {
-  border-color: #e4a101 transparent transparent transparent;
-  transition: .3s linear;
-}
-
-.newsletter-form button:hover {
-  background: #fff;
-}
-
-.newsletter-form button:hover::before {
-  border-color: transparent transparent #fff transparent;
-}
-
-.newsletter-form button:hover::after {
-  border-color: #fff transparent transparent transparent;
-}
-
-.newsletter-form button i {
-  font-size: 12px;
-  margin-left: 5px;
-}
-
-.s-newsletter-area .newsletter-wrap {
-  background-color: #1c181e;
-}
-
-.s-newsletter-area .newsletter-title h2 {
-  letter-spacing: 0;
-  text-transform: uppercase;
-}
-
-.s-newsletter-area .newsletter-form form input {
-  background: #262228;
-}
-
-.s-newsletter-area .newsletter-form-grp::after {
-  border-color: #262228 transparent transparent transparent;
-}
-
-.s-newsletter-area .newsletter-form-grp::before {
-  border-color: transparent transparent #262228 transparent;
-}
-
-

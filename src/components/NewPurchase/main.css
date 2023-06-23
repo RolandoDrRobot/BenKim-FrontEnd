@@ -1,0 +1,111 @@
+.newsletter-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 0 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.newsletter-form form {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.newsletter-form-grp {
+  position: relative;
+}
+
+.newsletter-form-grp i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  left: 15px;
+}
+
+.newsletter-form form input {
+  width: 195px;
+  background: #24182d;
+  border: none;
+  color: #fff;
+  padding: 17px 40px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.newsletter-form form input::placeholder {
+  color: #a0a0a0;
+}
+
+.newsletter-form-grp::before,
+.newsletter-form button::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 55px 20px;
+  border-color: transparent transparent #24182d transparent;
+}
+
+.newsletter-form-grp::after,
+.newsletter-form button::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 55px 20px 0 0;
+  border-color: #24182d transparent transparent transparent;
+}
+
+.newsletter-title h2 {
+  font-size: 26px;
+  letter-spacing: -1px;
+}
+
+.newsletter-form button {
+  border: none;
+  color: #1c1121;
+  font-size: 14px;
+  font-weight: 800;
+  padding: 17px 15px;
+  margin-left: 30px;
+  position: relative;
+  cursor: pointer;
+  transition: .3s linear;
+  background-color: var(--yellow);
+}
+
+.newsletter-form button::before {
+  border-color: transparent transparent #e4a101 transparent;
+  transition: .3s linear;
+}
+
+.newsletter-form button::after {
+  border-color: #e4a101 transparent transparent transparent;
+  transition: .3s linear;
+}
+
+.newsletter-form button:hover {
+  background: #fff;
+}
+
+.newsletter-form button:hover::before {
+  border-color: transparent transparent #fff transparent;
+}
+
+.newsletter-form button:hover::after {
+  border-color: #fff transparent transparent transparent;
+}
+
+.newsletter-form button i {
+  font-size: 12px;
+  margin-left: 5px;
+}

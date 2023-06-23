@@ -1,35 +1,23 @@
 import React from 'react';
 import Navbar from '../Navbar/index';
 import BukeleTableHeader from '../BukeleTableHeader/index';
-import NewPurchase from '../NewPurchase/index'
+import Purchase from '../Purchase/index';
+import NewPurchase from '../NewPurchase/index';
+import Cover from '../Cover/index'
 
 function BukeleTable() {
   return (
     <>
+      {/* <Cover /> */}
+      
       <Navbar />
-      <BukeleTableHeader />
-      <div className="table-row row">
-        <div className='col-2'>
-          <p>📆 Nov 18, 2022</p>
-        </div>
-        <div className='col-2'>
-          <p>$23 403.05</p>
-        </div>
-        <div className='col-2'>
-          <p>₿217</p>
-        </div>
-        <div className='col-2'>
-          <p>$5 078 462.52</p>
-        </div>
-        <div className='col-2'>
-          <p>$6 509 097.28</p>
-        </div>
-        <div className='col-2'>
-          <p>28.17%</p>
-          <p>$1 430 634.76</p>
+      <div className='main-content'>
+        <div>
+          <BukeleTableHeader />
+          <Purchase />
+          <NewPurchase />
         </div>
       </div>
-      <NewPurchase />
     </>
   )
 }
