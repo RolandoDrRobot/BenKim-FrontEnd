@@ -20,11 +20,11 @@ function BukeleTableHeader() {
           <h2>COST</h2>
           <label>HISTORIC PRICE * AMOUNT</label>
         </div>
-        <div className='col-2'>
+        <div className='col-4 col-md-2'>
           <h2>CURRENT VALUE</h2>
           <label>CURRENT PRICE * AMOUNT</label>
         </div>
-        <div className='col-2'>
+        <div className='col-4 col-md-2'>
           <h2>P/L</h2>
           <label>VALUE/COST COMPARISON</label>
         </div>
