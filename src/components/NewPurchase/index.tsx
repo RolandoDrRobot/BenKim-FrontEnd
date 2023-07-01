@@ -44,7 +44,7 @@ function NewPurchase() {
           <form onSubmit={onSubmitForm}>
             <div className="newsletter-form-grp">
               <i className="fa-sharp fa-solid fa-bitcoin-sign"></i>
-              <input placeholder="Enter amount" name="amount" type="number" />
+              <input placeholder="Enter amount" name="amount" type="number" required />
             </div>
             <button>Register purchase<i className="fas fa-paper-plane"></i></button>
           </form>
