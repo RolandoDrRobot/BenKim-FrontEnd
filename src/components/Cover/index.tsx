@@ -1,6 +1,6 @@
 import React from 'react';
 import loginButton from '../../assets/img/images/google button.png';
-import './main.css'
+import './main.css';
 
 function Cover() {
   function startCover() {

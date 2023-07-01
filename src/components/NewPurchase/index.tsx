@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import Loading from '../Loading/index';
 import { globalContext } from '../../hooks/appContext';
+import Loading from '../Loading/index';
 import './main.css'
 
 function NewPurchase() {
@@ -44,7 +44,7 @@ function NewPurchase() {
           <form onSubmit={onSubmitForm}>
             <div className="newsletter-form-grp">
               <i className="fa-sharp fa-solid fa-bitcoin-sign"></i>
-              <input placeholder="Enter amount" name="amount" type="number" required />
+              <input placeholder="Enter amount" name="amount" type="number" step="0.00000001" min="0" required />
             </div>
             <button>Register purchase<i className="fas fa-paper-plane"></i></button>
           </form>

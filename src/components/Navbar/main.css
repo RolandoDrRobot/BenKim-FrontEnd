@@ -38,7 +38,7 @@
   color: #e4a101;
 }
 
-.navbar-nav li a {
+.navbar-nav li .nav-items{
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   color: #fff;
   display: block;
@@ -51,6 +51,11 @@
   width: 100%;
   font-size: 20px;
   font-weight: bold;
+}
+
+.navbar-nav li a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .nav-item img {

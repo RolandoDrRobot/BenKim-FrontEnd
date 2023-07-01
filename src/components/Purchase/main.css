@@ -1,0 +1,15 @@
+.purcharse-row {
+  border-bottom: 2px solid #3a3042;
+}
+
+.none {
+  color: #fff;
+}
+
+.win {
+  color: greenyellow;
+}
+
+.lost {
+  color: red;
+}
