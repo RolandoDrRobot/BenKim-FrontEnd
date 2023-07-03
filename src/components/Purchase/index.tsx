@@ -43,7 +43,7 @@ function Purchase() {
   }
 
   function parseToCurrency(amount:any) {
-    return amount.toLocaleString('es-ES', { style: 'currency', currency: 'USD' })
+    return amount ? amount.toLocaleString('es-ES', { style: 'currency', currency: 'USD' }) : 0
   }
 
   function winOrLost(number:any) {
@@ -100,7 +100,7 @@ function Purchase() {
           <h3>{parseToCurrency(totals.totalPurchasePrice)}</h3>
         </div>
         <div className='col-2'>
-          <h3>₿ {totals.totalAmount}</h3>
+          <h3>₿ {totals.totalAmount.toFixed(4)}</h3>
         </div>
         <div className='col-2'>
           <h3>{parseToCurrency(totals.totalCost)}</h3>
