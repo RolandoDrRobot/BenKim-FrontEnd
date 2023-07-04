@@ -75,3 +75,18 @@
 .navbar-toggler:focus {
   box-shadow: unset;
 }
+
+.bitcoin-price {
+  margin-top: -17px;
+  margin-right: 4px;
+}
+
+.bitcoin-price strong {
+  font-weight: 800;
+  position: relative;
+  top: 2px;
+}
+
+.bitcoin-price img {
+  margin-left: 10px;
+}
