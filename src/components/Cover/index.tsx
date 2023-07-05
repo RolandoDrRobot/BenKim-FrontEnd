@@ -1,5 +1,5 @@
 import React from 'react';
-import loginButton from '../../assets/img/images/google button.png';
+import loginButton from '../../assets/img/google button.png';
 import './main.css';
 
 function Cover() {

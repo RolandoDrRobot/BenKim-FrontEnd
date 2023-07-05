@@ -25,7 +25,7 @@ body {
 #content {
   width: 100%;
   margin: auto;
-  background-image: url('https://rolandoarguello.com/wp-content/uploads/2023/05/area_bg01.jpg');
+  background-image: url('./assets/img/game_manage_bg.jpg');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -69,10 +69,16 @@ label {
 }
 
 p {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   margin-bottom: 0;
   overflow: hidden;
+}
+
+@media (max-width: 992px) {
+  p {
+    font-size: 14px;
+  }
 }
 
 span {
