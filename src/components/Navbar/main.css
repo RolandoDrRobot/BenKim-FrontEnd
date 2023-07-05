@@ -4,14 +4,25 @@
   left: 0;
   width: 100%;
   z-index: 2;
-  padding: 15px 15px 0;
+  padding: 15px 0 0;
   background-color: #1c1121;
-  border-bottom: 2px solid #3a3042;
+  border-bottom: 3px solid #3a3042;
   background-image: url('https://rolandoarguello.com/wp-content/uploads/2023/05/header_bg.jpg');
   background-position: right center;
   background-size: cover;
   background-attachment: fixed;
-  position: relative;
+}
+
+@media (max-width: 991px) {
+  .navbar {
+    padding: 15px 15px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    padding: 15px 0 5px;
+  }
 }
 
 .navbar .container {
@@ -27,6 +38,13 @@
   margin-right: 10px;
 }
 
+@media (max-width: 767px) {
+  .navbar .logo img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
 .navbar .logo h2 {
   font-family: 'Oxanium', cursive;
   font-weight: 800;
@@ -37,6 +55,13 @@
 .navbar .logo h2 span {
   font-size: 24px;
   color: #e4a101;
+}
+
+@media (max-width: 374px) {
+  .navbar .logo h2,
+  .navbar .logo h2 span {
+    font-size: 20px;
+  }
 }
 
 .navbar-nav li .nav-items {
@@ -67,7 +92,6 @@
 }
 
 .nav-item img {
-  width: 30px;
   border-radius: 50%;
 }
 

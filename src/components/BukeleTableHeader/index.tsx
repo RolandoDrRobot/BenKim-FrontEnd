@@ -4,19 +4,19 @@ function BukeleTableHeader() {
   return (
     <>
       <div className="table-row row">
-        <div className='col-2'>
+        <div className='col-4 col-md-2'>
           <h2>WHEN</h2>
           <label>UTC TIMEZONE NEWEST FIRST</label>
         </div>
-        <div className='col-2'>
+        <div className='col-4 col-md-2'>
           <h2>PURCHASE PRICE</h2>
           <label>AVERAGE $ / ₿ THAT DAY</label>
         </div>
-        <div className='col-2'>
+        <div className='col-4 col-md-2'>
           <h2>AMOUNT</h2>
           <label>AMOUNT SAVED BITCOIN</label>
         </div>
-        <div className='col-2'>
+        <div className='col-4 col-md-2'>
           <h2>COST</h2>
           <label>HISTORIC PRICE * AMOUNT</label>
         </div>

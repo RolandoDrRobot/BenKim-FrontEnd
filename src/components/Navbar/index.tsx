@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { globalContext } from '../../hooks/appContext';
 import monster from '../../assets/img/developermonster-face.png';
 import bitcoin from '../../assets/img/bitcoin.png';
+import power from '../../assets/img/power.png';
 import loadingIcon from '../../assets/img/loading.png';
 import './main.css';
 
@@ -36,11 +37,11 @@ function Navbar() {
       <nav className="navbar">
         <div className='container'>
           <div className="logo d-flex align-items-center mb-2">
-            <a href="https://developermonster.com/"><img src={monster} height="70" alt="Logo" /></a>
+            <a href="https://developermonster.com/"><img src={monster} alt="Logo" /></a>
             <h2>Monster <span>Bitcoin</span></h2>
           </div>
           <div className='d-flex align-items-center'>
-            <div className='bitcoin-price'>
+            <div className='bitcoin-price d-none d-md-block'>
               <strong>{parseToCurrency(BTCPrice)}</strong>
               <img src={bitcoin} width="35" height="35" />
             </div>
@@ -50,7 +51,18 @@ function Navbar() {
           </div>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
-              <li className="nav-item"><Link to="/" className='nav-items'>🎯 Logout</Link></li>
+              <li className="nav-items d-md-none">
+                <div className='nav-items'>
+                  <img src={bitcoin} width="35" height="35" className='mr-2' />
+                  <strong>{parseToCurrency(BTCPrice)}</strong>
+                </div>
+              </li>
+              <li className="nav-item">
+                <Link to="/" className='nav-items'>
+                  <img src={power} width="35" height="35" className='mr-2' />
+                  <strong>Logout</strong>
+                </Link>
+              </li>
               <li className="nav-item"></li>
             </ul>
           </div>

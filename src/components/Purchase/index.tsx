@@ -66,23 +66,23 @@ function Purchase() {
         purchases.map(function (purchase: any, i: any) {
           return (
             <div key={i} className="table-row purcharse-row row">
-              <div className='col-2'>
+              <div className='col-4 col-md-2'>
                 <p><i className="fa-solid fa-calendar-days"></i> {toDate(purchase.when._seconds)}</p>
                 <p><i className="fa-sharp fa-solid fa-clock"></i> {toTime(purchase.when._seconds)}</p>
               </div>
-              <div className='col-2'>
+              <div className='col-4 col-md-2'>
                 <p>{parseToCurrency(purchase.purchasePrice)}</p>
               </div>
-              <div className='col-2'>
+              <div className='col-4 col-md-2'>
                 <p className='yellow'>₿ {purchase.amount}</p>
               </div>
-              <div className='col-2'>
+              <div className='col-4 col-md-2'>
                 <p>{parseToCurrency(purchase.cost)}</p>
               </div>
-              <div className='col-2'>
+              <div className='col-4 col-md-2'>
                 <p>{parseToCurrency(purchase.currentValue)}</p>
               </div>
-              <div className='col-2'>
+              <div className='col-4 col-md-2'>
                 <p className={winOrLost(purchase.valueCostComparison.percentage)}>
                   {purchase.valueCostComparison.percentage.toFixed(2)}%
                 </p>
@@ -95,22 +95,22 @@ function Purchase() {
         })
       }
       <div className="table-row row">
-        <div className='col-2'>
+        <div className='col-4 col-md-2'>
           <h3>TOTALS</h3>
         </div>
-        <div className='col-2'>
+        <div className='col-4 col-md-2'>
           <h3>{parseToCurrency(totals.totalPurchasePrice)}</h3>
         </div>
-        <div className='col-2'>
+        <div className='col-4 col-md-2'>
           <h3>₿ {totals.totalAmount.toFixed(4)}</h3>
         </div>
-        <div className='col-2'>
+        <div className='col-4 col-md-2'>
           <h3>{parseToCurrency(totals.totalCost)}</h3>
         </div>
-        <div className='col-2'>
+        <div className='col-4 col-md-2'>
           <h3>{parseToCurrency(totals.totalCurrentValue)}</h3>
         </div>
-        <div className='col-2'>
+        <div className='col-4 col-md-2'>
           <h3 className={winOrLost(totals.totalValueCostComparison.percentge)}>
             {totals.totalValueCostComparison.percentge.toFixed(2)}%
           </h3>

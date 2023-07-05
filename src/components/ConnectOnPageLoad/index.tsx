@@ -5,7 +5,8 @@ import { globalContext } from '../../hooks/appContext';
 function ConnectOnPageLoad() {
   const {
     setUserID,
-    setName
+    setName,
+    setDisplayName
   } = React.useContext(globalContext);
 
   React.useEffect(() => {
@@ -21,7 +22,8 @@ function ConnectOnPageLoad() {
             const user = { id: response.data.id, displayName: response.data.displayName };
             localStorage.setItem('user', JSON.stringify(user));
             setUserID(response.data.id);
-            setName(response.data.displayName);
+            setName(response.data.name.givenName);
+            setDisplayName(response.data.displayName)
           });
         } catch (e) {
           console.log(e);
