@@ -10,6 +10,7 @@
   background-image: url('https://rolandoarguello.com/wp-content/uploads/2023/05/header_bg.jpg');
   background-position: right center;
   background-size: cover;
+  background-attachment: fixed;
   position: relative;
 }
 
@@ -38,7 +39,8 @@
   color: #e4a101;
 }
 
-.navbar-nav li .nav-items{
+.navbar-nav li .nav-items {
+  border-radius: 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   color: #fff;
   display: block;
@@ -51,6 +53,12 @@
   width: 100%;
   font-size: 20px;
   font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.navbar-nav li .nav-items:hover {
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .navbar-nav li a {

@@ -12,9 +12,9 @@ function BukeleTable() {
       <div className='main-content'>
         <div>
           <Hero />
+          <NewPurchase />
           <BukeleTableHeader />
           <Purchase />
-          <NewPurchase />
         </div>
       </div>
     </>

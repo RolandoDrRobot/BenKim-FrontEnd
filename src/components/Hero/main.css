@@ -1,10 +1,18 @@
 .hero {
-  padding: 60px 0 20px;
+  padding: 60px 0 0;
 }
 
 .hero h1 {
-  font-weight: bold;
+  font-weight: 800;
   margin-bottom: 5px;
+}
+
+.hero span {
+  font-weight: bold;
+}
+
+.hero .name {
+  font-weight: normal;
 }
 
 .fw-title h5 {

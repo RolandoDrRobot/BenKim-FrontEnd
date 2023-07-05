@@ -44,14 +44,11 @@ function NewPurchase() {
           <form onSubmit={onSubmitForm}>
             <div className="newsletter-form-grp">
               <i className="fa-sharp fa-solid fa-bitcoin-sign"></i>
-              <input placeholder="Enter amount" name="amount" type="number" min="0.0001" max="1000" required />
+              <input placeholder="Enter amount" name="amount" type="number" step="0.0001" required />
             </div>
             <button>Register purchase<i className="fas fa-paper-plane"></i></button>
           </form>
         </div>
-      </div>
-      <div className='d-flex justify-content-around'>
-        <strong><span className="alert-text">{newPurchaseStatus}</span></strong>
       </div>
       { isLoading === true ? <Loading /> : <></> }
     </>

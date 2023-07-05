@@ -35,6 +35,12 @@
   font-weight: 500;
 }
 
+@media (max-width: 768px) {
+  .newsletter-form form input {
+    width: 145px;
+  }
+}
+
 .newsletter-form form input::placeholder {
   color: #a0a0a0;
 }

@@ -50,7 +50,6 @@ function Navbar() {
           </div>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
-              <li className="nav-item"><p className='nav-items'>👑 {name}</p></li>
               <li className="nav-item"><Link to="/" className='nav-items'>🎯 Logout</Link></li>
               <li className="nav-item"></li>
             </ul>
