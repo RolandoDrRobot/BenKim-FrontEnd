@@ -22,26 +22,21 @@ function Purchase() {
     });
   }
 
-  function toDate(secs: any) {
-    var t = new Date(2011, 0, 1, 0, 0, 0, 0);
-    t.setSeconds(secs);
-    const date = {
-      year: t.getFullYear(),
-      month: t.getMonth() + 1,
-      day: t.getDate(),
-    };
-    return date.day + '/' + date.month + '/' + date.year;
+  function toDate(when: any) {
+    const date = new Date(when);
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1; // Los meses comienzan desde 0, por lo que se suma 1
+    const day = date.getDate();
+
+    return day + '/' + month + '/' + year;
   }
 
-  function toTime(secs: any) {
-    var t = new Date(2011, 0, 1, 0, 0, 0, 0);
-    t.setSeconds(secs);
-    const date = {
-      hour: t.getHours(),
-      minute: t.getMinutes(),
-      second: t.getSeconds(),
-    };
-    return date.hour + ':' + date.minute + ':' + date.second;
+  function toTime(when: any) {
+    const time = new Date(when);
+    const hour = time.getHours();
+    const minute = time.getMinutes();
+    const second = time.getSeconds();
+    return hour + ':' + minute + ':' + second;
   }
 
   function parseToCurrency(amount:any) {
@@ -67,8 +62,8 @@ function Purchase() {
           return (
             <div key={i} className="table-row purcharse-row row">
               <div className='col-4 col-md-2'>
-                <p><i className="fa-solid fa-calendar-days"></i> {toDate(purchase.when._seconds)}</p>
-                <p><i className="fa-sharp fa-solid fa-clock"></i> {toTime(purchase.when._seconds)}</p>
+                <p><i className="fa-solid fa-calendar-days"></i> {toDate(purchase.when)}</p>
+                <p><i className="fa-sharp fa-solid fa-clock"></i> {toTime(purchase.when)}</p>
               </div>
               <div className='col-4 col-md-2'>
                 <p>{parseToCurrency(purchase.purchasePrice)}</p>

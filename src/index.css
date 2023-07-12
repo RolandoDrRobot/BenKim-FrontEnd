@@ -24,6 +24,7 @@ body {
 
 #content {
   width: 100%;
+  min-height: 100vh;
   margin: auto;
   background-image: url('./assets/img/game_manage_bg.jpg');
   background-position: center;

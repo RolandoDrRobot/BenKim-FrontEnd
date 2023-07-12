@@ -12,9 +12,9 @@ function NewPurchase() {
   const alert = useAlert();
   let [isLoading, setIsLoading] = React.useState<boolean>(false);
 
-  const createPurchase = async (amount: number, userID: string) => {
+  const createPurchase = async (amount: number, when: Date, price: number, userID: string) => {
     setIsLoading(true);
-    await axios.post('http://localhost:443/createPurchase', { amount: amount, userID: userID }).then((response) => {
+    await axios.post('http://localhost:443/createPurchase', { amount: amount, when: when, price: price, userID: userID  }).then((response) => {
       alert.show('Purchase Created')
     }).then(() => {
       setIsLoading(false);
@@ -25,9 +25,11 @@ function NewPurchase() {
     e.preventDefault();
     const target = e.target as typeof e.target & {
       amount: { value: number };
+      when: { value: Date };
+      price: { value: number };
     };
-    const amount = target.amount.value; 
-    createPurchase(amount, userID);
+    const date = target.when.value;
+    createPurchase(target.amount.value, date, target.price.value, userID);
   }
 
   return (
