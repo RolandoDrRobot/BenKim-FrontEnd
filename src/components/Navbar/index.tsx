@@ -43,7 +43,7 @@ function Navbar() {
           <div className='d-flex align-items-center'>
             <div className='bitcoin-price d-none d-md-block'>
               <strong>{parseToCurrency(BTCPrice)}</strong>
-              <img src={bitcoin} width="35" height="35" />
+              <img src={bitcoin} width="35" height="35" className='bitcoin-price-img' />
             </div>
             <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <img src={loadingIcon} width="35" height="35" alt="" />
@@ -53,13 +53,13 @@ function Navbar() {
             <ul className="navbar-nav">
               <li className="nav-items d-md-none">
                 <div className='nav-items'>
-                  <img src={bitcoin} width="35" height="35" className='mr-2' />
+                  <img src={bitcoin} width="35" height="35" className='bitcoin-price-img-mobile mr-2' />
                   <strong>{parseToCurrency(BTCPrice)}</strong>
                 </div>
               </li>
               <li className="nav-item">
                 <Link to="/" className='nav-items'>
-                  <img src={power} width="35" height="35" className='mr-2' />
+                  <img src={power} width="35" height="35" className='logout mr-2' />
                   <strong>Logout</strong>
                 </Link>
               </li>

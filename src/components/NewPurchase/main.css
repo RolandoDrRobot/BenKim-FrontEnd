@@ -150,6 +150,7 @@
   cursor: pointer;
   transition: .3s linear;
   background-color: var(--yellow);
+  animation: only-aura 7s ease 0s infinite normal none;
 }
 
 @media (max-width: 767px) {
@@ -172,15 +173,18 @@
 }
 
 .newsletter-form button:hover {
-  background: #fff;
+  color: #e4a101;
+  background: #1b1124;
 }
 
 .newsletter-form button:hover::before {
-  border-color: transparent transparent #fff transparent;
+  color: #e4a101;
+  border-color: transparent transparent #1b1124 transparent;
 }
 
 .newsletter-form button:hover::after {
-  border-color: #fff transparent transparent transparent;
+  color: #e4a101;
+  border-color: #1b1124 transparent transparent transparent;
 }
 
 .newsletter-form button i {

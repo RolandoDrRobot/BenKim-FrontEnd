@@ -37,6 +37,7 @@ body {
 }
 
 .table-row {
+  position: relative;
   display: flex;
   align-items: flex-end;
   padding: 30px 10px 15px;
@@ -151,4 +152,30 @@ a:hover {
 
 #__react-alert__ div div div svg:hover {
   stroke: var(--light-gray) !important;
+}
+
+@keyframes aura {
+  0%,
+  50%,
+  100% {
+    transform: translate(0, -2px);
+    filter: drop-shadow(0 0 2px var(--yellow));
+  }
+  25%,
+  75% {
+    transform: translate(0, 2px);
+    filter: drop-shadow(0 0 8px var(--yellow));
+  }
+}
+
+@keyframes only-aura {
+  0%,
+  50%,
+  100% {
+    filter: drop-shadow(0 0 0px var(--yellow));
+  }
+  25%,
+  75% {
+    filter: drop-shadow(0 0 7px var(--yellow));
+  }
 }

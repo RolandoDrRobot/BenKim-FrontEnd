@@ -36,6 +36,7 @@
   border: 2px solid #e4a101;
   border-radius: 50%;
   margin-right: 10px;
+  animation: aura 7s ease 0s infinite normal none;
 }
 
 @media (max-width: 767px) {
@@ -119,6 +120,16 @@
   top: 2px;
 }
 
-.bitcoin-price img {
+.bitcoin-price-img,
+.bitcoin-price-img-mobile {
   margin-left: 10px;
+  animation: only-aura 7s ease 0s infinite normal none;
+}
+
+.bitcoin-price-img-mobile {
+  margin-left: 0;
+}
+
+.logout {
+  animation: only-aura 7s ease 0s infinite normal none;
 }

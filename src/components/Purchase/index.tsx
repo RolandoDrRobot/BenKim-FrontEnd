@@ -1,7 +1,10 @@
 import React, { useEffect, useContext } from 'react';
 import axios from 'axios';
 import { globalContext } from '../../hooks/appContext';
+import { useAlert } from 'react-alert';
 import Loading from '../../components/Loading/index';
+import closeIcon from '../../assets/img/close2.png';
+
 import './main.css';
 
 function Purchase() {
@@ -13,6 +16,7 @@ function Purchase() {
     setTotals,
   } = useContext(globalContext);
   let [isLoading, setIsLoading] = React.useState<boolean>(true);
+  const alert = useAlert();
 
   const loadPurcharses = async (userID: string) => {
     await axios.post('http://localhost:443/getPurcharses', { userID: userID }).then((response) => {
@@ -50,6 +54,12 @@ function Purchase() {
     return winOrLost
   }
 
+  const removePurchase = async (purchaseID:String) => {
+    await axios.post('http://localhost:443/removePurchase', { purchaseID: purchaseID }).then((response) => {
+      alert.show(response.data.status);
+    });
+  }
+
   useEffect(() => {
     if (userID) loadPurcharses(userID);
   }, [userID]);
@@ -85,6 +95,7 @@ function Purchase() {
                   {parseToCurrency(purchase.valueCostComparison.money)}
                 </p>
               </div>
+              <img src={closeIcon} className='close-icon' width='25' onClick={() => removePurchase(purchase.purchaseID)} />
             </div>
           )
         })
