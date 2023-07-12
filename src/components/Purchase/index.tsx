@@ -70,13 +70,13 @@ function Purchase() {
       {
         purchases.map(function (purchase: any, i: any) {
           return (
-            <div key={i} className="table-row purcharse-row row">
+            <div key={i} className="table-row purcharse-row row align-items-center">
               <div className='col-4 col-md-2'>
                 <p><i className="fa-solid fa-calendar-days"></i> {toDate(purchase.when)}</p>
                 <p><i className="fa-sharp fa-solid fa-clock"></i> {toTime(purchase.when)}</p>
               </div>
               <div className='col-4 col-md-2'>
-                <p>{parseToCurrency(purchase.purchasePrice)}</p>
+                <p>{parseToCurrency(parseFloat(purchase.purchasePrice))}</p>
               </div>
               <div className='col-4 col-md-2'>
                 <p className='yellow'>₿ {purchase.amount}</p>
@@ -95,36 +95,46 @@ function Purchase() {
                   {parseToCurrency(purchase.valueCostComparison.money)}
                 </p>
               </div>
-              <img src={closeIcon} className='close-icon' width='25' onClick={() => removePurchase(purchase.purchaseID)} />
+              <img src={closeIcon} className='close-icon' width='25' data-toggle="collapse" data-target={'#'+i} aria-expanded="false" aria-controls={i} />
+              <div id={i} className='close-section collapse'>
+                <div className='purchase-button'>
+                  <span className='d-none d-md-block'>Do you want to remove this purchase?</span>
+                  <button onClick={() => removePurchase(purchase.purchaseID)}>Yes</button>
+                  <span className='d-md-none'>Do you want to remove this purchase?</span>
+                </div>
+              </div>
             </div>
           )
         })
       }
-      <div className="table-row row">
-        <div className='col-4 col-md-2'>
-          <h3>TOTALS</h3>
-        </div>
-        <div className='col-4 col-md-2'>
-          <h3>{parseToCurrency(totals.totalPurchasePrice)}</h3>
-        </div>
-        <div className='col-4 col-md-2'>
-          <h3>₿ {totals.totalAmount.toFixed(4)}</h3>
-        </div>
-        <div className='col-4 col-md-2'>
-          <h3>{parseToCurrency(totals.totalCost)}</h3>
-        </div>
-        <div className='col-4 col-md-2'>
-          <h3>{parseToCurrency(totals.totalCurrentValue)}</h3>
-        </div>
-        <div className='col-4 col-md-2'>
-          <h3 className={winOrLost(totals.totalValueCostComparison.percentge)}>
-            {totals.totalValueCostComparison.percentge.toFixed(2)}%
-          </h3>
-          <h3 className={winOrLost(totals.totalValueCostComparison.money)}>
-            {parseToCurrency(totals.totalValueCostComparison.money)}
-          </h3>
-        </div>
-      </div>
+      {
+        totals.totalAmount == 0 ? <></> :
+          <div className="table-row row align-items-center">
+            <div className='col-4 col-md-2'>
+              <h3>TOTALS</h3>
+            </div>
+            <div className='col-4 col-md-2'>
+              <h3>{parseToCurrency(totals.totalPurchasePrice)}</h3>
+            </div>
+            <div className='col-4 col-md-2'>
+              <h3>₿ {totals.totalAmount.toFixed(4)}</h3>
+            </div>
+            <div className='col-4 col-md-2'>
+              <h3>{parseToCurrency(totals.totalCost)}</h3>
+            </div>
+            <div className='col-4 col-md-2'>
+              <h3>{parseToCurrency(totals.totalCurrentValue)}</h3>
+            </div>
+            <div className='col-4 col-md-2'>
+              <h3 className={winOrLost(totals.totalValueCostComparison.percentge)}>
+                {totals.totalValueCostComparison.percentge.toFixed(2)}%
+              </h3>
+              <h3 className={winOrLost(totals.totalValueCostComparison.money)}>
+                {parseToCurrency(totals.totalValueCostComparison.money)}
+              </h3>
+            </div>
+          </div>
+        }
     </>
   )
 }

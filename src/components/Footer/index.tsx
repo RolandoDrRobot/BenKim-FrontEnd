@@ -23,14 +23,14 @@ function Footer() {
     <>
       <div className='footer'>
         <div className="footer-widget d-md-none">
-          <div className="fw-title mb-4">
-            <h5>Follow Monster <span className='btc'>Bitcoin</span></h5>
-          </div>
           <div className="footer-social">
             <ul>
               <li><a href="https://medium.com/@rolandoarguello" target="_blank" rel="noopener"><i className="fab fa-medium"></i></a></li>
               <li><a href="https://twitter.com/monsterbitcoins" target="_blank" rel="noopener"><i className="fab fa-twitter"></i></a></li>
             </ul>
+          </div>
+          <div className="fw-title mb-2">
+            <h5>Follow <span className='btc'>Monster Bitcoins</span></h5>
           </div>
         </div>
         <div className="copyright-wrap">

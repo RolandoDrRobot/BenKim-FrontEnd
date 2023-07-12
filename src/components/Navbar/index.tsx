@@ -38,7 +38,7 @@ function Navbar() {
         <div className='container'>
           <div className="logo d-flex align-items-center mb-2">
             <a href="https://developermonster.com/"><img src={monster} alt="Logo" /></a>
-            <h2>Monster <span>Bitcoin</span></h2>
+            <h2>Monster <span>Bitcoins</span></h2>
           </div>
           <div className='d-flex align-items-center'>
             <div className='bitcoin-price d-none d-md-block'>

@@ -37,7 +37,7 @@ function Hero() {
           <div className='d-none d-md-block col-md-4'>
             <div className="footer-widget">
               <div className="fw-title mb-4">
-                <h5>Follow Monster <span className='btc'>Bitcoin</span></h5>
+                <h5>Follow <span className='btc'>Monster Bitcoins</span></h5>
               </div>
               <div className="footer-social">
                 <ul>

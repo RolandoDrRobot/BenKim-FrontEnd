@@ -6,6 +6,60 @@
   color: var(--yellow);
 }
 
+.purchase-button {
+  height: 100%;
+  text-align: center;
+  padding: 35px 40px 10px;
+}
+
+.purchase-button button {
+  text-align: center;
+  display: block;
+  width: 80%;
+  font-size: 14px;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  background: #1c1121;
+  padding: 0;
+  cursor: pointer;
+  line-height: 1;
+  padding: 10px;
+  border-bottom: 2px solid #e9a301;
+  transition: .3s linear;
+  margin: 0 auto 8px;
+}
+
+.purchase-button button:hover {
+  color: #1c1121;
+  background-color: #e9a301;
+  border-bottom: 2px solid #1c1121;
+}
+
+.purchase-button span {
+  color: #dfdede;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .purchase-button button {
+    width: 100px;
+    margin: auto auto auto 0;
+  }
+  .purchase-button {
+    text-align: center;
+    padding: 20px 15px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .purchase-button span {
+    font-size: 16px;
+    margin: 15px 20px auto auto;
+  }
+}
+
 .none {
   color: #fff;
 }
@@ -23,4 +77,14 @@
   right: 10px;
   top: 15px;
   cursor: pointer;
+  z-index: 5
+}
+
+.close-section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #1e1227;
 }
