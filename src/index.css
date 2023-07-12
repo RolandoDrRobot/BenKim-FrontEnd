@@ -39,7 +39,6 @@ body {
   display: flex;
   align-items: flex-end;
   padding: 30px 10px 15px;
-  border-radius: 7px;
   border-bottom: 2px solid var(--yellow);
 }
 
@@ -85,16 +84,32 @@ p {
   font-weight: bold;
   margin-bottom: 0;
   overflow: hidden;
+  color: #dfdede;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   p {
     font-size: 14px;
   }
 }
 
+@media (max-width: 767px) {
+  p {
+    font-size: 13px;
+  }
+}
+
 span {
   color: var(--yellow);
+}
+
+a {
+  color: var(--yellow);
+}
+
+a:hover {
+  text-decoration: none;
+  color: #fff;
 }
 
 .loading img {

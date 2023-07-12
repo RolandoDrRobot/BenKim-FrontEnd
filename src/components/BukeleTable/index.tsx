@@ -4,6 +4,7 @@ import Hero from '../Hero/index'
 import BukeleTableHeader from '../BukeleTableHeader/index';
 import Purchase from '../Purchase/index';
 import NewPurchase from '../NewPurchase/index';
+import Footer from '../Footer/index';
 
 function BukeleTable() {
   return (
@@ -15,6 +16,7 @@ function BukeleTable() {
           <NewPurchase />
           <BukeleTableHeader />
           <Purchase />
+          <Footer />
         </div>
       </div>
     </>

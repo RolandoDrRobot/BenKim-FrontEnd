@@ -1,21 +1,35 @@
 .newsletter-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 50px 0 30px;
+  padding: 50px 0 15px;
   position: relative;
   z-index: 1;
+  text-align: left;
+}
+
+.newsletter-wrap .advance-purchase {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 10px 0 20px;
+  display: block;
+  padding: 0 20px;
 }
 
 @media (max-width: 991px) {
   .newsletter-wrap {
     padding: 20px 0 0;
   }
+  .newsletter-wrap .advance-purchase {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 767px) {
   .newsletter-wrap {
-    padding: 0 0 30px;
+    text-align: center;
+    padding: 0 0 20px;
+  }
+  .newsletter-wrap .advance-purchase {
+    font-size: 14px;
+    text-align: center;
   }
 }
 
@@ -52,7 +66,7 @@
 }
 
 .newsletter-form form input {
-  width: 245px;
+  width: 200px;
   background: #24182d;
   border: none;
   color: #fff;
@@ -107,11 +121,21 @@
 .newsletter-title h2 {
   font-size: 26px;
   letter-spacing: -1px;
+  cursor: pointer;
+  transition: all 0.22s;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 0;
+}
+
+.newsletter-title h2:hover {
+  background-color: #24182d;
 }
 
 @media (max-width: 767px) {
   .newsletter-title h2 {
     text-align: center;
+    padding: 15px 0;
   }
 }
 

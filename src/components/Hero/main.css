@@ -19,6 +19,11 @@
   font-weight: normal;
 }
 
+.hero .wallet {
+  padding: 0 30px;
+  position: relative;
+}
+
 @media (max-width: 991px) {
   .hero {
     padding: 126px 0 0;
@@ -37,10 +42,26 @@
 
 @media (max-width: 767px) {
   .hero {
+    text-align: center;
     padding: 121px 0 0;
   }
   .hero .col-12 {
     padding-bottom: 25px;
+  }
+  .hero .wallet::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    right: 0;
+    margin: 0 auto;
+    width: 270px;
+    height: 13px;
+    background-repeat: no-repeat;
+    background-image: url('https://rolandoarguello.com/wp-content/uploads/2023/05/title_bar03.png');
+  }
+  .hero .wallet {
+    margin-bottom: 45px;
   }
 }
 
@@ -74,11 +95,12 @@
   display: flex;
   flex-wrap: wrap;
   padding: 0;
+  margin-bottom: 0;
 }
 
 @media (max-width: 991px) {
   .footer-social ul {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
 }
 
