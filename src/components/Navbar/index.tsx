@@ -11,6 +11,7 @@ import './main.css';
 function Navbar() {
   const {
     name,
+    photo,
     BTCPrice,
     setBTCPrice,
   } = useContext(globalContext);
@@ -38,7 +39,9 @@ function Navbar() {
         <div className='container'>
           <div className="logo d-flex align-items-center mb-2">
             <a href="https://developermonster.com/"><img src={monster} alt="Logo" /></a>
-            <h2>Monster <span>Bitcoins</span></h2>
+            <Link to="/dashboard">
+              <h2>Monster <span>Bitcoins</span></h2>
+            </Link>
           </div>
           <div className='d-flex align-items-center'>
             <div className='bitcoin-price d-none d-md-block'>
@@ -58,12 +61,17 @@ function Navbar() {
                 </div>
               </li>
               <li className="nav-item">
+                <Link to="/user" className='nav-items'>
+                  <img src={photo} width="35" height="35" className='logout mr-2' />
+                  <strong>{name}</strong>
+                </Link>
+              </li>
+              <li className="nav-item">
                 <Link to="/" className='nav-items'>
                   <img src={power} width="35" height="35" className='logout mr-2' />
                   <strong>Logout</strong>
                 </Link>
               </li>
-              <li className="nav-item"></li>
             </ul>
           </div>
         </div>

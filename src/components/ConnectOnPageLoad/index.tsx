@@ -6,7 +6,9 @@ function ConnectOnPageLoad() {
   const {
     setUserID,
     setName,
-    setDisplayName
+    setDisplayName,
+    setPhoto,
+    setEmail
   } = React.useContext(globalContext);
 
   React.useEffect(() => {
@@ -15,15 +17,26 @@ function ConnectOnPageLoad() {
       if (user) {
         const parsedUser = JSON.parse(user);
         setUserID(parsedUser.id);
-        setName(parsedUser.displayName);
+        setName(parsedUser.name);
+        setDisplayName(parsedUser.displayName)
+        setPhoto(parsedUser.photo);
+        setEmail(parsedUser.email)
       } else {
         try {
           await axios.get('http://localhost:443/api/user', {}).then((response) => {
-            const user = { id: response.data.id, displayName: response.data.displayName };
+            const user = { 
+              id: response.data.id,
+              name: response.data.displayName,
+              displayName: response.data.displayName,
+              email: response.data.email,
+              photo: response.data.photos[0].value
+            };
             localStorage.setItem('user', JSON.stringify(user));
             setUserID(response.data.id);
             setName(response.data.name.givenName);
             setDisplayName(response.data.displayName)
+            setPhoto(response.data.photos[0].value);
+            setEmail(response.data.email)
           });
         } catch (e) {
           console.log(e);

@@ -10,6 +10,7 @@ import './index.css';
 import ConnectOnPageLoad from './components/ConnectOnPageLoad/index';
 import Cover from './components/Cover/index';
 import BukeleTable from './components/BukeleTable/index';
+import Profile from './components/Profile/index';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -21,6 +22,7 @@ ReactDOM.render(
             <Routes>
               <Route path='/' element={<Cover />}/>
               <Route path='/dashboard' element={<BukeleTable />}/>
+              <Route path='/user' element={<Profile />}/>
             </Routes>
           </div>
         </Router>
