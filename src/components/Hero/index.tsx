@@ -23,7 +23,7 @@ function Hero() {
     <>
       <div className='hero'>
         <div className='stats row justify-content-between'>
-          <div className='wallet col-12 col-md-6'>
+          <div id="wallet" className='wallet col-12 col-md-6'>
             <span className='name'>{name}'s Portfolio Tracker</span>
             <h1>{parseToCurrency(totals.totalCurrentValue)}</h1>
             <span>₿ {totals.totalAmount.toFixed(4)}</span>

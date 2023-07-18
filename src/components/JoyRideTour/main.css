@@ -1,0 +1,31 @@
+.react-joyride__tooltip {
+  background-color: #1c1024 !important;
+  border: 2px solid #e4a101 !important;
+  border-radius: 9px !important;
+  background-image: url('../../assets/img/slider_bg02.jpg') !important;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.react-joyride__tooltip h2 {
+  color: #fff;
+}
+
+.react-joyride__tooltip label {
+  color: #e4a101 !important;
+  font-size: 14px;
+  background-color: transparent !important;
+}
+
+.react-joyride__tooltip button,
+.react-joyride__tooltip span {
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff !important;
+  background-color: #e4a101 !important;
+}
+
+.react-joyride__tooltip button {
+  border-radius: 5px !important;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../Navbar/index';
+import JoyRideTour from '../JoyRideTour/index'
 import Hero from '../Hero/index'
 import BukeleTableHeader from '../BukeleTableHeader/index';
 import Purchase from '../Purchase/index';
@@ -12,6 +13,7 @@ function BukeleTable() {
       <Navbar />
       <div className='main-content'>
         <div>
+          <JoyRideTour />
           <Hero />
           <NewPurchase />
           <BukeleTableHeader />

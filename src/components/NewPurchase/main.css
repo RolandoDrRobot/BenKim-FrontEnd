@@ -1,11 +1,11 @@
-.newsletter-wrap {
+.purchase-wrap {
   padding: 50px 0 15px;
   position: relative;
   z-index: 1;
   text-align: left;
 }
 
-.newsletter-wrap .advance-purchase {
+.purchase-wrap .advance-purchase {
   font-weight: bold;
   font-size: 16px;
   margin: 10px 0 20px;
@@ -14,44 +14,44 @@
 }
 
 @media (max-width: 991px) {
-  .newsletter-wrap {
+  .purchase-wrap {
     padding: 20px 0 0;
   }
-  .newsletter-wrap .advance-purchase {
+  .purchase-wrap .advance-purchase {
     font-size: 14px;
   }
 }
 
 @media (max-width: 767px) {
-  .newsletter-wrap {
+  .purchase-wrap {
     text-align: center;
     padding: 0 0 20px;
   }
-  .newsletter-wrap .advance-purchase {
+  .purchase-wrap .advance-purchase {
     font-size: 14px;
     text-align: center;
   }
 }
 
-.newsletter-form form {
+.purchase-form form {
   display: flex;
   align-items: center;
   margin-right: 20px;
 }
 
 @media (max-width: 767px) {
-  .newsletter-form form {
+  .purchase-form form {
     display: block;
     margin: 0;
     padding: 0 15px;
   }
 }
 
-.newsletter-form-grp {
+.purchase-form-grp {
   position: relative;
 }
 
-.newsletter-form-grp i {
+.purchase-form-grp i {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -60,12 +60,12 @@
 }
 
 @media (max-width: 767px) {
-  .newsletter-form-grp i {
+  .purchase-form-grp i {
     top: 42%;
   }
 }
 
-.newsletter-form form input {
+.purchase-form form input {
   width: 200px;
   background: #24182d;
   border: none;
@@ -76,24 +76,24 @@
 }
 
 @media (max-width: 991px) {
-  .newsletter-form form input {
+  .purchase-form form input {
     width: 145px;
   }
 }
 
 @media (max-width: 767px) {
-  .newsletter-form form input {
+  .purchase-form form input {
     width: 100%;
     margin-bottom: 8px;
   }
 }
 
-.newsletter-form form input::placeholder {
+.purchase-form form input::placeholder {
   color: #a0a0a0;
 }
 
-.newsletter-form-grp::before,
-.newsletter-form button::before {
+.purchase-form-grp::before,
+.purchase-form button::before {
   content: "";
   position: absolute;
   left: -20px;
@@ -105,8 +105,8 @@
   border-color: transparent transparent #24182d transparent;
 }
 
-.newsletter-form-grp::after,
-.newsletter-form button::after {
+.purchase-form-grp::after,
+.purchase-form button::after {
   content: "";
   position: absolute;
   right: -20px;
@@ -118,7 +118,7 @@
   border-color: #24182d transparent transparent transparent;
 }
 
-.newsletter-title h2 {
+.purchase-title h2 {
   font-size: 26px;
   letter-spacing: -1px;
   cursor: pointer;
@@ -128,18 +128,18 @@
   margin-bottom: 0;
 }
 
-.newsletter-title h2:hover {
+.purchase-title h2:hover {
   background-color: #24182d;
 }
 
 @media (max-width: 767px) {
-  .newsletter-title h2 {
+  .purchase-title h2 {
     text-align: center;
     padding: 15px 0;
   }
 }
 
-.newsletter-form button {
+.purchase-form button {
   border: none;
   color: #1c1121;
   font-size: 14px;
@@ -154,7 +154,7 @@
 }
 
 @media (max-width: 767px) {
-  .newsletter-form button {
+  .purchase-form button {
     display: block;
     margin: auto;
     width: 100%;
@@ -162,32 +162,32 @@
 }
 
 
-.newsletter-form button::before {
+.purchase-form button::before {
   border-color: transparent transparent #e4a101 transparent;
   transition: .3s linear;
 }
 
-.newsletter-form button::after {
+.purchase-form button::after {
   border-color: #e4a101 transparent transparent transparent;
   transition: .3s linear;
 }
 
-.newsletter-form button:hover {
+.purchase-form button:hover {
   color: #e4a101;
   background: #1b1124;
 }
 
-.newsletter-form button:hover::before {
+.purchase-form button:hover::before {
   color: #e4a101;
   border-color: transparent transparent #1b1124 transparent;
 }
 
-.newsletter-form button:hover::after {
+.purchase-form button:hover::after {
   color: #e4a101;
   border-color: #1b1124 transparent transparent transparent;
 }
 
-.newsletter-form button i {
+.purchase-form button i {
   font-size: 12px;
   margin-left: 5px;
 }

@@ -3,7 +3,7 @@ import React from 'react';
 function BukeleTableHeader() {
   return (
     <>
-      <div className="table-row row">
+      <div id="table-title" className="table-row row">
         <div className='col-4 col-md-2'>
           <h2>WHEN</h2>
           <label>UTC TIMEZONE NEWEST FIRST</label>

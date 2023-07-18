@@ -68,7 +68,7 @@
 .navbar-nav li .nav-items {
   border-radius: 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
-  color: #fff;
+  color: #dfdede;
   display: block;
   float: left;
   margin: 0;
@@ -77,13 +77,14 @@
   text-decoration: none;
   text-transform: capitalize;
   width: 100%;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s;
 }
 
 .navbar-nav li .nav-items:hover {
+  color: #fff;
   background-color: rgba(255, 255, 255, 0.15);
 }
 
