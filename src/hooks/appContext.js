@@ -9,6 +9,7 @@ function GlobalContextProvider(props) {
   const [displayName, setDisplayName] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [photo, setPhoto] = React.useState('');
+  const [isTourOpen, setIsTourOpen] = React.useState(false);
   const [BTCPrice, setBTCPrice] = React.useState(0);
   const [purchases, setPurchases] = React.useState([]);
   const [totals, setTotals] = React.useState({
@@ -32,6 +33,8 @@ function GlobalContextProvider(props) {
         setEmail,
         photo,
         setPhoto,
+        isTourOpen,
+        setIsTourOpen,
         displayName,
         setDisplayName,
         BTCPrice,

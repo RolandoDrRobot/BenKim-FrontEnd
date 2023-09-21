@@ -1,16 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Joyride, { STATUS } from "react-joyride";
+import { globalContext } from '../../hooks/appContext';
 import './main.css';
 
 function JoyRideTour() {
-  const [{ run }, setState] = useState({ run: true });
+  const {
+    isTourOpen
+  } = useContext(globalContext);
 
   return (
     <div>
       <Joyride
         continuous
         callback={() => { }}
-        run={run}
+        run={isTourOpen}
         steps={[
           {
             content: <>
@@ -78,7 +81,6 @@ function JoyRideTour() {
         hideCloseButton
         scrollToFirstStep
         showSkipButton
-        showProgress
       />
     </div>
   );
