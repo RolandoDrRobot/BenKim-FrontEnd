@@ -21,7 +21,7 @@ function Hero() {
 
   return (
     <>
-      <div className='hero'>
+      <div className='hero mb-2 mb-lg-5'>
         <div className='stats row justify-content-between'>
           <div id="wallet" className='wallet col-12 col-md-6'>
             <span className='name'>{name}'s Portfolio Tracker</span>

@@ -54,17 +54,17 @@ function Navbar() {
           </div>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
-              <li className="nav-items d-md-none">
-                <div className='nav-items'>
-                  <img src={bitcoin} width="35" height="35" className='bitcoin-price-img-mobile mr-2' />
-                  <strong>{parseToCurrency(BTCPrice)}</strong>
-                </div>
-              </li>
               <li className="nav-item">
                 <Link to="/user" className='nav-items'>
                   <img src={photo} width="35" height="35" className='logout mr-2' />
                   <strong>{name}</strong>
                 </Link>
+              </li>
+              <li className="nav-items d-md-none">
+                <div className='nav-items'>
+                  <img src={bitcoin} width="35" height="35" className='bitcoin-price-img-mobile mr-2' />
+                  <strong>{parseToCurrency(BTCPrice)}</strong>
+                </div>
               </li>
               <li className="nav-item">
                 <Link to="/" className='nav-items'>

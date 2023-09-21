@@ -70,7 +70,7 @@ function Purchase() {
       {
         purchases.map(function (purchase: any, i: any) {
           return (
-            <div id='purchase-item' key={i} className="table-row purcharse-row row align-items-center">
+            <div id='purchase-item' key={i} className="table-row purcharse-row row align-items-end">
               <div className='col-4 col-md-2'>
                 <p><i className="fa-solid fa-calendar-days"></i> {toDate(purchase.when)}</p>
                 <p><i className="fa-sharp fa-solid fa-clock"></i> {toTime(purchase.when)}</p>

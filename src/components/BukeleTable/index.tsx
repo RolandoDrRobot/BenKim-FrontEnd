@@ -15,9 +15,9 @@ function BukeleTable() {
         <div>
           <JoyRideTour />
           <Hero />
-          <NewPurchase />
           <BukeleTableHeader />
           <Purchase />
+          <NewPurchase />
           <Footer />
         </div>
       </div>
