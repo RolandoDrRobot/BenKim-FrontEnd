@@ -41,11 +41,13 @@ function Cover() {
           <div className="footer-social">
             <ul>
               <li><a href="https://medium.com/@rolandoarguello" target="_blank" rel="noopener"><i className="fab fa-medium"></i></a></li>
-              <li><a href="https://twitter.com/monsterbitcoins" target="_blank" rel="noopener"><i className="fab fa-twitter"></i></a></li>
+              <li><a href="https://twitter.com/RoloArguelloDev" target="_blank" rel="noopener"><i className="fab fa-twitter"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/rolando-arguello-531942186/" target="_blank" rel="noopener"><i className="fa-brands fa-linkedin-in"></i></a></li>
+              <li><a href="https://www.instagram.com/rolo.world/" target="_blank" rel="noopener"><i className="fa-brands fa-instagram"></i></a></li>
             </ul>
           </div>
           <div className="fw-title mb-2">
-            <h5>Follow <span className='btc'>Monster Bitcoins</span></h5>
+            <h5>Let's Connect! <span className='btc'>Get in Touch</span></h5>
           </div>
         </div>
         <div className="copyright-wrap">

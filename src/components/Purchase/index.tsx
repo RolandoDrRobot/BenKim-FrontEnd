@@ -98,9 +98,9 @@ function Purchase() {
               <img src={closeIcon} className='close-icon' width='25' data-toggle="collapse" data-target={'#'+i} aria-expanded="false" aria-controls={i} />
               <div id={i} className='close-section collapse'>
                 <div className='purchase-button'>
-                  <span className='d-none d-md-block'>Do you want to remove this purchase?</span>
+                  <span className='d-none d-md-block'>Do you want to cash out these bitcoins?</span>
                   <button onClick={() => removePurchase(purchase.purchaseID)}>Yes</button>
-                  <span className='d-md-none'>Do you want to remove this purchase?</span>
+                  <span className='d-md-none'>Do you want to cash out these bitcoins?</span>
                 </div>
               </div>
             </div>
@@ -109,7 +109,7 @@ function Purchase() {
       }
       {
         totals.totalAmount == 0 ? <></> :
-          <div id='totals' className="table-row row align-items-center">
+          <div id='totals' className="table-row row align-items-center mb-5">
             <div className='col-4 col-md-2'>
               <h3>TOTALS</h3>
             </div>

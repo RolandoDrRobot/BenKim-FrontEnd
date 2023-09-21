@@ -41,7 +41,6 @@ body {
   display: flex;
   align-items: flex-end;
   padding: 25px 10px 10px;
-  border-bottom: 2px solid var(--yellow);
 }
 
 h2 {
