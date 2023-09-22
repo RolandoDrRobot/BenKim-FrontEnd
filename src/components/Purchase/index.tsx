@@ -1,6 +1,5 @@
 import React, { useEffect, useContext } from 'react';
 import axios from 'axios';
-import { globalContext } from '../../hooks/appContext';
 import { useAlert } from 'react-alert';
 import Loading from '../../components/Loading/index';
 import closeIcon from '../../assets/img/close2.png';
@@ -18,7 +17,9 @@ interface PurchaseProps {
       percentge: number,
       money: number
     }
-  }
+  },
+  setPurchases: Function;
+  setTotals: Function;
 }
 
 interface Purchase {
@@ -34,11 +35,7 @@ interface Purchase {
   }
 }
 
-function Purchase({ userID, purchases, totals }: PurchaseProps) {
-  const {
-    setPurchases,
-    setTotals,
-  } = useContext(globalContext);
+function Purchase({ userID, purchases, totals, setPurchases, setTotals }: PurchaseProps) {
   let [isLoading, setIsLoading] = React.useState<boolean>(true);
   const alert = useAlert();
 

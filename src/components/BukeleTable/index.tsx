@@ -13,10 +13,12 @@ function BukeleTable() {
     userID,
     name,
     photo,
-    BTCPrice,
     isTourOpen,
     purchases,
-    totals
+    totals,
+    setPurchases,
+    setTotals,
+    setIsTourOpen
   } = useContext(globalContext);
 
   return (
@@ -24,7 +26,7 @@ function BukeleTable() {
       <Navbar 
         name={name} 
         photo={photo}
-        BTCPrice={BTCPrice} 
+        setIsTourOpen={setIsTourOpen}
       />
       <div className='main-content'>
         <div>
@@ -39,7 +41,9 @@ function BukeleTable() {
           <Purchase 
             userID={userID}
             purchases={purchases}
-            totals={totals} 
+            totals={totals}
+            setPurchases={setPurchases}
+            setTotals={setTotals}
           />
           <NewPurchase
             userID={userID}

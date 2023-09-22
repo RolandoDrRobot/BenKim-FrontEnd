@@ -1,26 +1,21 @@
-import React, { useContext } from 'react';
-import axios from 'axios';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { globalContext } from '../../hooks/appContext';
 import monster from '../../assets/img/developermonster-face.png';
 import bitcoin from '../../assets/img/bitcoin.png';
 import power from '../../assets/img/power.png';
 import tour from '../../assets/img/question.png';
 import loadingIcon from '../../assets/img/loading.png';
+import { useBTCPrice } from '../../hooks/useAppData';
 import './main.css';
 
 interface NavbarProps {
   name: string;
   photo: string;
-  BTCPrice: number;
+  setIsTourOpen: Function;
 }
 
-function Navbar({ name, photo, BTCPrice }: NavbarProps) {
-  const {
-    setBTCPrice,
-    setIsTourOpen,
-  } = useContext(globalContext);
-
+function Navbar({ name, photo, setIsTourOpen }: NavbarProps) {
+  const { btcPrice } = useBTCPrice();
   const [isNavCollapsed, setIsNavCollapsed] = React.useState(true);
 
   function parseToCurrency(amount:any) {
@@ -31,19 +26,6 @@ function Navbar({ name, photo, BTCPrice }: NavbarProps) {
     setIsNavCollapsed(false);
     setIsTourOpen(true);
   };
-
-  React.useEffect(() => {
-    const setBTC= async () => {
-      try {
-        await axios.get('http://localhost:443/fetchBtcPrice').then((response) => {
-          setBTCPrice(response.data);
-        });
-      } catch (e) {
-        console.log(e);
-      }
-    }
-    setBTC();
-  }, []);
 
   return (
     <>
@@ -57,7 +39,7 @@ function Navbar({ name, photo, BTCPrice }: NavbarProps) {
           </div>
           <div className='d-flex align-items-center'>
             <div className='bitcoin-price d-none d-md-block'>
-              <strong>{parseToCurrency(BTCPrice)}</strong>
+              <strong>{parseToCurrency(btcPrice)}</strong>
               <img src={bitcoin} width="30" height="30" className='bitcoin-price-img' />
             </div>
             <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded={!isNavCollapsed ? true : false} aria-label="Toggle navigation">
@@ -75,7 +57,7 @@ function Navbar({ name, photo, BTCPrice }: NavbarProps) {
               <li className="nav-items d-md-none">
                 <div className='nav-items'>
                   <img src={bitcoin} width="30" height="30" className='bitcoin-price-img-mobile mr-2' />
-                  <strong>{parseToCurrency(BTCPrice)}</strong>
+                  <strong>{parseToCurrency(btcPrice)}</strong>
                 </div>
               </li>
               <li className="nav-item">

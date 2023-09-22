@@ -15,7 +15,7 @@ function Profile() {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <section className="cover profile">
         <div className="container">
           <div className="row justify-content-center">
