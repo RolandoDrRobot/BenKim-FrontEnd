@@ -1,12 +1,21 @@
-import React, { useContext } from 'react';
-import { globalContext } from '../../hooks/appContext';
+import React from 'react';
 import './main.css';
 
-function Hero() {
-  const {
-    name,
-    totals
-  } = useContext(globalContext);
+interface HeroProps {
+  name: string;
+  totals: {
+    totalAmount: number,
+    totalPurchasePrice: number,
+    totalCost: number,
+    totalCurrentValue: number,
+    totalValueCostComparison: {
+      percentge: number,
+      money: number
+    }
+  }
+}
+
+function Hero({ name, totals }: HeroProps) {
 
   function parseToCurrency(amount:any) {
     return amount ? amount.toLocaleString('es-ES', { style: 'currency', currency: 'USD' }) : 0;

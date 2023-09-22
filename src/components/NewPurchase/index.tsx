@@ -1,14 +1,14 @@
 import React from 'react';
 import axios from 'axios';
 import { useAlert } from 'react-alert';
-import { globalContext } from '../../hooks/appContext';
 import Loading from '../Loading/index';
 import './main.css'
 
-function NewPurchase() {
-  const { 
-    userID
-   } = React.useContext(globalContext);
+interface NewPurchaseProps {
+  userID: string;
+}
+
+function NewPurchase({ userID }: NewPurchaseProps) {
   const alert = useAlert();
   let [isLoading, setIsLoading] = React.useState<boolean>(false);
 

@@ -1,4 +1,4 @@
-import React, { useContext }  from 'react';
+import React, { useContext } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { globalContext } from '../../hooks/appContext';
@@ -9,11 +9,14 @@ import tour from '../../assets/img/question.png';
 import loadingIcon from '../../assets/img/loading.png';
 import './main.css';
 
-function Navbar() {
+interface NavbarProps {
+  name: string;
+  photo: string;
+  BTCPrice: number;
+}
+
+function Navbar({ name, photo, BTCPrice }: NavbarProps) {
   const {
-    name,
-    photo,
-    BTCPrice,
     setBTCPrice,
     setIsTourOpen,
   } = useContext(globalContext);
@@ -26,7 +29,6 @@ function Navbar() {
 
   function startTour() {
     setIsNavCollapsed(false);
-    console.log(isNavCollapsed);
     setIsTourOpen(true);
   };
 

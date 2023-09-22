@@ -4,15 +4,39 @@ import { globalContext } from '../../hooks/appContext';
 import { useAlert } from 'react-alert';
 import Loading from '../../components/Loading/index';
 import closeIcon from '../../assets/img/close2.png';
-
 import './main.css';
 
-function Purchase() {
+interface PurchaseProps {
+  userID: string;
+  purchases: Purchase[],
+  totals: {
+    totalAmount: number,
+    totalPurchasePrice: number,
+    totalCost: number,
+    totalCurrentValue: number,
+    totalValueCostComparison: {
+      percentge: number,
+      money: number
+    }
+  }
+}
+
+interface Purchase {
+  when: Date,
+  purchaseID: number,
+  purchasePrice: number,
+  amount: number,
+  cost: number,
+  currentValue: number,
+  valueCostComparison: {
+    percentage: number,
+    money: number
+  }
+}
+
+function Purchase({ userID, purchases, totals }: PurchaseProps) {
   const {
-    userID,
-    purchases,
     setPurchases,
-    totals,
     setTotals,
   } = useContext(globalContext);
   let [isLoading, setIsLoading] = React.useState<boolean>(true);

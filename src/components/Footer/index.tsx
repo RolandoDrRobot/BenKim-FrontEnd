@@ -1,24 +1,7 @@
-import React, { useContext } from 'react';
-import { globalContext } from '../../hooks/appContext';
+import React from 'react';
 import './main.css';
 
 function Footer() {
-  const {
-    name,
-    totals
-  } = useContext(globalContext);
-
-  function parseToCurrency(amount:any) {
-    return amount ? amount.toLocaleString('es-ES', { style: 'currency', currency: 'USD' }) : 0;
-  }
-
-  function winOrLost(number:any) {
-    let winOrLost = 'none';
-    if (number > 0) winOrLost = 'win'
-    if (number < 0) winOrLost = 'lost'
-    return winOrLost
-  }
-
   return (
     <>
       <div className='footer'>

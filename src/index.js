@@ -16,8 +16,8 @@ ReactDOM.render(
   <React.StrictMode>
     <AlertProvider template={AlertTemplate} {...alertOptions}>
       <GlobalContextProvider>
+        <ConnectOnPageLoad />
         <Router>
-          <ConnectOnPageLoad />
           <div id="content">
             <Routes>
               <Route path='/' element={<Cover />}/>

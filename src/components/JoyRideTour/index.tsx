@@ -1,13 +1,12 @@
-import React, { useState, useContext } from "react";
-import Joyride, { STATUS } from "react-joyride";
-import { globalContext } from '../../hooks/appContext';
+import React from "react";
+import Joyride from "react-joyride";
 import './main.css';
 
-function JoyRideTour() {
-  const {
-    isTourOpen
-  } = useContext(globalContext);
+interface JoyRideTourProps {
+  isTourOpen: boolean;
+}
 
+function JoyRideTour({ isTourOpen }: JoyRideTourProps) {
   return (
     <div>
       <Joyride
