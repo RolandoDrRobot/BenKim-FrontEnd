@@ -1,21 +1,15 @@
 import React from 'react';
+import { usePurchasesAndTotals } from '../../hooks/useAppData';
 import './main.css';
 
 interface HeroProps {
   name: string;
-  totals: {
-    totalAmount: number,
-    totalPurchasePrice: number,
-    totalCost: number,
-    totalCurrentValue: number,
-    totalValueCostComparison: {
-      percentge: number,
-      money: number
-    }
-  }
+  userID: string;
 }
 
-function Hero({ name, totals }: HeroProps) {
+function Hero({ name, userID }: HeroProps) {
+
+  const { totals } = usePurchasesAndTotals(userID);
 
   function parseToCurrency(amount:any) {
     return amount ? amount.toLocaleString('es-ES', { style: 'currency', currency: 'USD' }) : 0;

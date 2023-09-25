@@ -1,51 +1,17 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect } from 'react';
 import axios from 'axios';
 import { useAlert } from 'react-alert';
-import Loading from '../../components/Loading/index';
+import { usePurchasesAndTotals } from '../../hooks/useAppData';
 import closeIcon from '../../assets/img/close2.png';
 import './main.css';
 
 interface PurchaseProps {
   userID: string;
-  purchases: Purchase[],
-  totals: {
-    totalAmount: number,
-    totalPurchasePrice: number,
-    totalCost: number,
-    totalCurrentValue: number,
-    totalValueCostComparison: {
-      percentge: number,
-      money: number
-    }
-  },
-  setPurchases: Function;
-  setTotals: Function;
 }
 
-interface Purchase {
-  when: Date,
-  purchaseID: number,
-  purchasePrice: number,
-  amount: number,
-  cost: number,
-  currentValue: number,
-  valueCostComparison: {
-    percentage: number,
-    money: number
-  }
-}
-
-function Purchase({ userID, purchases, totals, setPurchases, setTotals }: PurchaseProps) {
-  let [isLoading, setIsLoading] = React.useState<boolean>(true);
+function Purchase({ userID }: PurchaseProps) {
   const alert = useAlert();
-
-  const loadPurcharses = async (userID: string) => {
-    await axios.post('http://localhost:443/getPurcharses', { userID: userID }).then((response) => {
-      setPurchases(response.data.purchases);
-      setTotals(response.data.totals)
-      setIsLoading(false);
-    });
-  }
+  const { purchases, totals } = usePurchasesAndTotals(userID);
 
   function toDate(when: any) {
     const date = new Date(when);
@@ -81,12 +47,7 @@ function Purchase({ userID, purchases, totals, setPurchases, setTotals }: Purcha
     });
   }
 
-  useEffect(() => {
-    if (userID) loadPurcharses(userID);
-  }, [userID]);
-
   return (
-    isLoading === true ? <Loading /> :
     <>
       {
         purchases.map(function (purchase: any, i: any) {

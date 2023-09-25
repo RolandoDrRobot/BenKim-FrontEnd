@@ -14,10 +14,6 @@ function BukeleTable() {
     name,
     photo,
     isTourOpen,
-    purchases,
-    totals,
-    setPurchases,
-    setTotals,
     setIsTourOpen
   } = useContext(globalContext);
 
@@ -35,15 +31,11 @@ function BukeleTable() {
           />
           <Hero
             name={name}
-            totals={totals}
+            userID={userID}
            />
           <BukeleTableHeader />
           <Purchase 
             userID={userID}
-            purchases={purchases}
-            totals={totals}
-            setPurchases={setPurchases}
-            setTotals={setTotals}
           />
           <NewPurchase
             userID={userID}
