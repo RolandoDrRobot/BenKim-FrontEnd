@@ -18,10 +18,6 @@ function Navbar({ name, photo, setIsTourOpen }: NavbarProps) {
   const { btcPrice } = useBTCPrice();
   const [isNavCollapsed, setIsNavCollapsed] = React.useState(true);
 
-  function parseToCurrency(amount:any) {
-    return amount ? amount.toLocaleString('es-ES', { style: 'currency', currency: 'USD' }) : 0
-  }
-
   function startTour() {
     setIsNavCollapsed(false);
     setIsTourOpen(true);
@@ -39,7 +35,7 @@ function Navbar({ name, photo, setIsTourOpen }: NavbarProps) {
           </div>
           <div className='d-flex align-items-center'>
             <div className='bitcoin-price d-none d-md-block'>
-              <strong>{parseToCurrency(btcPrice)}</strong>
+              <strong>$ {(btcPrice)}</strong>
               <img src={bitcoin} width="30" height="30" className='bitcoin-price-img' />
             </div>
             <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded={!isNavCollapsed ? true : false} aria-label="Toggle navigation">
@@ -57,7 +53,7 @@ function Navbar({ name, photo, setIsTourOpen }: NavbarProps) {
               <li className="nav-items d-md-none">
                 <div className='nav-items'>
                   <img src={bitcoin} width="30" height="30" className='bitcoin-price-img-mobile mr-2' />
-                  <strong>{parseToCurrency(btcPrice)}</strong>
+                  <strong>$ {(btcPrice)}</strong>
                 </div>
               </li>
               <li className="nav-item">

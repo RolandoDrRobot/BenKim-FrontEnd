@@ -1,4 +1,5 @@
 import React from 'react';
+import Loading from '../Loading/index';
 import { usePurchasesAndTotals } from '../../hooks/useAppData';
 import './main.css';
 
@@ -9,10 +10,10 @@ interface HeroProps {
 
 function Hero({ name, userID }: HeroProps) {
 
-  const { totals } = usePurchasesAndTotals(userID);
+  const { totals, isLoading } = usePurchasesAndTotals(userID);
 
   function parseToCurrency(amount:any) {
-    return amount ? amount.toLocaleString('es-ES', { style: 'currency', currency: 'USD' }) : 0;
+    return amount.toLocaleString('es-ES', { style: 'currency', currency: 'USD' });
   }
 
   function winOrLost(number:any) {
@@ -27,15 +28,20 @@ function Hero({ name, userID }: HeroProps) {
       <div className='hero mb-2 mb-lg-5'>
         <div className='stats row justify-content-between'>
           <div id="wallet" className='wallet col-12 col-md-6'>
-            <span className='name'>{name}'s Portfolio Tracker</span>
-            <h1>{parseToCurrency(totals.totalCurrentValue)}</h1>
-            <span>₿ {totals.totalAmount.toFixed(4)}</span>
-            <span className='m-3'>{parseToCurrency(totals.totalCost)}</span>
-            <span> 
-              <span className={winOrLost(totals.totalValueCostComparison.percentge) + ' m-2'}>
-                {totals.totalValueCostComparison.percentge.toFixed(2)}%
-              </span>
-            </span>
+            <span className='name'>{name}'s Portfolio Tracker</span>         
+            {
+              isLoading === true ? <Loading /> :
+              <>
+                <h1>{parseToCurrency(totals.totalCurrentValue)}</h1>
+                <span>₿ {totals.totalAmount.toFixed(4)}</span>
+                <span className='m-3'>{parseToCurrency(totals.totalCost)}</span>
+                <span> 
+                  <span className={winOrLost(totals.totalValueCostComparison.percentge) + ' m-2'}>
+                    {totals.totalValueCostComparison.percentge.toFixed(2)}%
+                  </span>
+                </span>
+              </>
+            }
           </div>
           <div className='d-none d-md-block col-md-4'>
             <div className="footer-widget">

@@ -18,6 +18,7 @@ function NewPurchase({ userID }: NewPurchaseProps) {
       alert.show('Purchase Created')
     }).then(() => {
       setIsLoading(false);
+      setTimeout(() => { window.location.reload() }, 3000);
     });
   }
 

@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import Loading from '../Loading/index';
 import axios from 'axios';
 import { useAlert } from 'react-alert';
 import { usePurchasesAndTotals } from '../../hooks/useAppData';
@@ -11,7 +12,7 @@ interface PurchaseProps {
 
 function Purchase({ userID }: PurchaseProps) {
   const alert = useAlert();
-  const { purchases, totals } = usePurchasesAndTotals(userID);
+  const { purchases, totals, isLoading } = usePurchasesAndTotals(userID);
 
   function toDate(when: any) {
     const date = new Date(when);
@@ -44,12 +45,15 @@ function Purchase({ userID }: PurchaseProps) {
   const removePurchase = async (purchaseID:String) => {
     await axios.post('http://localhost:443/removePurchase', { purchaseID: purchaseID }).then((response) => {
       alert.show(response.data.status);
+    }).then(() => {
+      setTimeout(() => { window.location.reload() }, 3000);
     });
   }
 
   return (
     <>
       {
+        isLoading === true ? <Loading /> :
         purchases.map(function (purchase: any, i: any) {
           return (
             <div id='purchase-item' key={i} className="table-row purcharse-row row align-items-end">

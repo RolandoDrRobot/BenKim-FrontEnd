@@ -18,6 +18,7 @@ const useBTCPrice = () => {
 
 const usePurchasesAndTotals = (userID: string) => {
   const [purchases, setPurchases] = useState([]);
+  let [isLoading, setIsLoading] = useState<boolean>(true);
   const [totals, setTotals] = useState({
     totalAmount: 0,
     totalPurchasePrice: 0,
@@ -33,14 +34,16 @@ const usePurchasesAndTotals = (userID: string) => {
     if (userID) {
       axios.post('http://localhost:443/getPurcharses', { userID: userID }).then((response) => {
       setPurchases(response.data.purchases);
-      setTotals(response.data.totals)
+      setTotals(response.data.totals);
+      setIsLoading(false);
     });
     }
   }, [userID]);
 
   return {
     purchases,
-    totals
+    totals,
+    isLoading
   }
 }
 

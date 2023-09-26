@@ -12,14 +12,12 @@
 }
 
 * {
-  transition: all 0.25s;
 }
 
 body {
   color: var(--white);
   background-color: var(--light-green);
   font-family: 'Oxanium', sans-serif;
-  transition: all 0.3s;
 }
 
 #content {
