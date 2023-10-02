@@ -22,7 +22,7 @@ function Footer() {
         <div className="copyright-wrap">
           <div className="row">
             <div className="col-lg-8 col-md-7">
-              <p>Copyright © 2023 <a href="https://rolandoarguello.com/">Monster Bitcoins</a> All rights reserved</p>
+              <p>Copyright © 2023 <a href="/dashboard">Monster Bitcoins</a> All rights reserved</p>
             </div>
             <div className="col-lg-4 col-md-5 d-none d-md-block">
               <img src={cards} height="15" alt="img" />

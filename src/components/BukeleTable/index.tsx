@@ -12,18 +12,12 @@ function BukeleTable() {
   const {
     userID,
     name,
-    photo,
     isTourOpen,
-    setIsTourOpen
   } = useContext(globalContext);
 
   return (
     <>
-      <Navbar 
-        name={name} 
-        photo={photo}
-        setIsTourOpen={setIsTourOpen}
-      />
+      <Navbar />
       <div className='main-content'>
         <div>
           <JoyRideTour

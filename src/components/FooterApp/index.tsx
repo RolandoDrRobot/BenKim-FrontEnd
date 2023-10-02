@@ -8,7 +8,7 @@ function FooterApp() {
       <div className='footer pt-4 d-md-none'>
         <div className="footer-widget p-3">
             <div className="footer-logo d-flex justify-content-center align-items-center pb-4">
-              <a href="https://rolandoarguello.com/"><img src={monster} height="70" alt="Logo" /></a>
+              <a href="/dashboard"><img src={monster} height="70" alt="Logo" /></a>
               <h2>Monster <span>Bitcoins</span></h2>
             </div>
             <div className="footer-text">
@@ -30,7 +30,7 @@ function FooterApp() {
         </div>
         <div className="copyright-wrap">
           <div>
-            <p>Copyright © 2023 <a href="https://rolandoarguello.com/">Monster Bitcoins</a> All rights reserved</p>
+            <p>Copyright © 2023 <a href="/dashboard">Monster Bitcoins</a> All rights reserved</p>
           </div>
         </div>
       </div>

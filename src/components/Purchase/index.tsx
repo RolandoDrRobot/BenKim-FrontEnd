@@ -95,7 +95,7 @@ function Purchase({ userID }: PurchaseProps) {
       }
       {
         totals.totalAmount == 0 ? <></> :
-          <div id='totals' className="table-row row align-items-center mb-5">
+          <div id='totals' className="table-row row align-items-center">
             <div className='col-4 col-md-2'>
               <h3>TOTALS</h3>
             </div>
