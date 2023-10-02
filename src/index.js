@@ -11,6 +11,7 @@ import ConnectOnPageLoad from './components/ConnectOnPageLoad/index';
 import Cover from './components/Cover/index';
 import BukeleTable from './components/BukeleTable/index';
 import Profile from './components/Profile/index';
+import TOS from './components/TOS/index';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -23,6 +24,7 @@ ReactDOM.render(
               <Route path='/' element={<Cover />}/>
               <Route path='/dashboard' element={<BukeleTable />}/>
               <Route path='/user' element={<Profile />}/>
+              <Route path='/tos' element={<TOS />}/>
             </Routes>
           </div>
         </Router>

@@ -1,19 +1,19 @@
 import React, { useContext }  from 'react';
-import monster from '../../assets/img/developermonster-face.png';
+import Navbar from '../Navbar/index';
+import FooterApp from '../FooterApp/index';
 import { globalContext } from '../../hooks/appContext';
 import './main.css';
 
 function Profile() {
   const {
-    userID,
     name,
-    displayName,
     photo,
     email
   } = useContext(globalContext);
 
   return (
     <>
+      <Navbar />
       <section className="cover profile">
         <div className="container">
           <div className="row justify-content-center">
@@ -25,12 +25,12 @@ function Profile() {
                 <div className='purchase-button'>
                   <button>Delete Account <i className="fa-solid fa-delete-left"></i></button>
                 </div>
-
               </div>
             </div>
           </div>
         </div>
       </section>
+      <FooterApp />
     </>
   )
 }

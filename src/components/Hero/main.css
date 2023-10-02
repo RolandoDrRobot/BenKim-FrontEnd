@@ -3,7 +3,7 @@
 }
 
 .hero .stats:before {
-  background-image: url('https://rolandoarguello.com/wp-content/uploads/2023/05/title_bar03.png');
+  background-image: url('../../assets/img/title_bar03.png');
 }
 
 .hero h1 {
@@ -58,7 +58,7 @@
     width: 270px;
     height: 13px;
     background-repeat: no-repeat;
-    background-image: url('https://rolandoarguello.com/wp-content/uploads/2023/05/title_bar03.png');
+    background-image: url('../../assets/img/title_bar03.png');
   }
   .hero .wallet {
     margin-bottom: 45px;

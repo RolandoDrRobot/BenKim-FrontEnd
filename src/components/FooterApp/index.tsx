@@ -1,11 +1,20 @@
 import React from 'react';
-import cards from '../../assets/img/card_img.png';
+import monster from '../../assets/img/developermonster-face.png';
 import './main.css';
 
-function Footer() {
+function FooterApp() {
   return (
     <>
-      <div className='footer'>
+      <div className='footer pt-4 d-md-none'>
+        <div className="footer-widget p-3">
+            <div className="footer-logo d-flex justify-content-center align-items-center pb-4">
+              <a href="https://rolandoarguello.com/"><img src={monster} height="70" alt="Logo" /></a>
+              <h2>Monster <span>Bitcoins</span></h2>
+            </div>
+            <div className="footer-text">
+              <p>Welcome to your Bitcoin performance tracker, this app is was made for hodl 🐲👑</p>
+            </div>
+          </div>
         <div className="footer-widget d-md-none">
           <div className="footer-social">
             <ul>
@@ -20,13 +29,8 @@ function Footer() {
           </div>
         </div>
         <div className="copyright-wrap">
-          <div className="row">
-            <div className="col-lg-8 col-md-7">
-              <p>Copyright © 2023 <a href="https://rolandoarguello.com/">Monster Bitcoins</a> All rights reserved</p>
-            </div>
-            <div className="col-lg-4 col-md-5 d-none d-md-block">
-              <img src={cards} height="15" alt="img" />
-            </div>
+          <div>
+            <p>Copyright © 2023 <a href="https://rolandoarguello.com/">Monster Bitcoins</a> All rights reserved</p>
           </div>
         </div>
       </div>
@@ -34,4 +38,4 @@ function Footer() {
   )
 }
 
-export default Footer;
+export default FooterApp;

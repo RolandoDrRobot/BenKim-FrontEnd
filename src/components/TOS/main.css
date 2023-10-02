@@ -1,0 +1,33 @@
+.profile {
+  background-image: url('../../assets/img/slider_bg02.jpg');
+  background-position: center;
+}
+
+.profile img {
+  object-fit: cover;
+  border: 2px solid #e4a101;
+  border-radius: 50%;
+  margin-right: 10px;
+  animation: aura 7s ease 0s infinite normal none;
+  margin-bottom: 24px;
+}
+
+.profile h2 {
+  font-size: 30px;
+}
+
+.profile .purchase-button {
+  padding-top: 8px;
+}
+
+.profile .purchase-button button {
+  height: 55px;
+}
+
+@media (min-width: 768px) {
+  .profile .purchase-button button {
+    width: 300px;
+    margin: 0 auto 8px;
+  }
+}
+
