@@ -22,9 +22,9 @@ function NewPurchase({ userID }: NewPurchaseProps) {
     });
   }
 
-  const onSubmitForm = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const target = e.target as typeof e.target & {
+  const onSubmitForm = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const target = event.target as typeof event.target & {
       amount: { value: number };
       when: { value: Date };
       price: { value: number };

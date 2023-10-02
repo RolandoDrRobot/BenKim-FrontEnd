@@ -8,10 +8,10 @@ function TOS() {
   return (
     <>
       <Navbar />
-      <section className="TOS py-5 my-4">
+      <section className="TOS py-5 mt-4">
         <div className="container py-5">
           <div className="text-left pb-5">
-            <strong className='pb-4'>
+            <strong className='d-block mb-4'>
               Last Updated: 10/02/2023
             </strong>
             <h2><span>Terms of Service</span></h2> 

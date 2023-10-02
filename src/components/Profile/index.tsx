@@ -25,7 +25,6 @@ function Profile() {
                 <div className='purchase-button'>
                   <button>Delete Account <i className="fa-solid fa-delete-left"></i></button>
                 </div>
-
               </div>
             </div>
           </div>
